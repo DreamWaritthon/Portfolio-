@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //     document.getElementById(tabName).classList.add("active-tab");
 //     element.classList.add("active-link");
 // }
-
+ 
 document.addEventListener('DOMContentLoaded', function() {
     const openButton = document.getElementById('openPopup');
     const popup = document.getElementById('popup');
