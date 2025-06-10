@@ -1,0 +1,916 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pattaya&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Kanit", sans-serif; /* เปลี่ยนเป็นชื่อฟอนต์ที่ต้องการ */
+    /* font-family: sans-serif; */
+}
+html{
+    scroll-behavior: smooth; /* ทำให้การเลื่อนหน้าเว็บเรียบ */
+}
+body{
+    background-color: #080808;
+    color: #333;
+}
+#header{
+    width: 100%; 
+    height: 100vh;  
+    background-image: url(/images/background_Dream.png); /* เปลี่ยนเป็น URL ของภาพพื้นหลังที่ต้องการ */
+    background-position: center; /* จัดตำแหน่งภาพพื้นหลังให้อยู่ตรงกลาง */
+    background-repeat: no-repeat; /*ป้องกันไม่ให้ภาพพื้นหลังซ้ำกัน*/
+    background-attachment: fixed;  
+    background-size: cover;  
+}
+
+nav .fas{
+    color: #fff; /* เปลี่ยนสีไอคอนให้เป็นสีขาว */
+    font-size: 2rem; /* ขนาดของไอคอน */
+    margin-right: 10px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+nav .fa{    
+    color: #fff; /* เปลี่ยนสีไอคอนให้เป็นสีขาว */
+    font-size: 2rem; /* ขนาดของไอคอน */
+    margin-right: 10px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem; /* เพิ่ม padding เพื่อให้เมนูนำทางมีระยะห่างจากขอบหน้า */
+    width: 100%; /* ทำให้เมนูนำทางเต็มความกว้างของหน้า */
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    justify-content: right; /* จัดตำแหน่งรายการเมนูไปทางขวา */
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    
+}
+nav ul li a:hover{
+    background-color: #333; /* เปลี่ยนสีพื้นหลังเมื่อเลื่อนเมาส์ */
+    color: #f0f0f0; /* เปลี่ยนสีตัวอักษรเมื่อเลื่อนเมาส์ */
+}
+nav ul li a:hover{
+    color: #f0f0f0;
+}
+nav .logo{
+    width: 200px;
+    height: 200px;
+    background-image: url(/images/Gemini_Generated_Image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 2rem;
+    transition: transform 0.3s ease; 
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้น */
+    z-index: 1; /* ทำให้โลโก้อยู่บน top */
+    position: relative; /* ให้โลโก้สามารถใช้ z-index ได้ */
+    z-index: 1; /* ทำให้โลโก้อยู่บน top */
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้น */
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงขนาดเมื่อเลื่อนเมาส์ */
+}
+nav .logo:hover{
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้นเมื่อผู้ใช้เลื่อนไปยังโลโก้ */
+}
+
+.header-content {
+    margin-top: 10%;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px; /* เพิ่ม padding เพื่อให้ข้อความไม่ติดขอบ */
+    max-width: 800px; /* จำกัดความกว้างของข้อความ */
+}
+.header-content h1 {
+    font-family: 'Itim', cursive; /* เปลี่ยนเป็นชื่อฟอนต์ที่ต้องการ */
+    font-weight: 400; /* กำหนดน้ำหนักของฟอนต์ */
+    text-transform: uppercase; /* ทำให้ข้อความเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+    letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+    margin-top: 20%;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem; 
+}
+.header-content p {
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    margin-bottom: 2rem; 
+}   
+.header-content a {
+    display: inline-block; 
+    padding: 0.5rem 1rem;
+    background-color: #333; /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีตัวอักษรของปุ่ม */
+    border-radius: 5px; /* มุมโค้งของปุ่ม */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    transition: background-color 0.3s ease; /* การเปลี่ยนสีพื้นหลังเมื่อเลื่อนเมาส์ */
+}
+.header-content a:hover {
+    background-color: #555; /* เปลี่ยนสีพื้นหลังเมื่อเลื่อนเมาส์ */
+    color: #fff; /* เปลี่ยนสีตัวอักษรเมื่อเลื่อนเมาส์ */
+}
+ .header-content span {
+    color: #ff6347; /* สีของข้อความที่ต้องการเน้น */
+    font-weight: bold; /* ทำให้ข้อความหนาขึ้น */
+    font-size: 1.5rem; /* ขนาดของข้อความที่ต้องการเน้น */
+    display: inline-block; /* ทำให้ข้อความเป็นบล็อก */ 
+ }
+
+
+ /* --------------about------------------- */
+ #about {
+    padding: 50px 0;
+    background-color: #080808; /* สีพื้นหลังของส่วน about */
+    color: #333; /* สีตัวอักษร */
+}
+.row {
+    display: flex;
+    justify-content: space-between; /* จัดตำแหน่งคอลัมน์ให้อยู่ตรงกลาง */
+    flex-wrap: wrap; /* ทำให้คอลัมน์สามารถย้ายไปยังบรรทัดถัดไปได้เมื่อพื้นที่ไม่พอ */
+}
+.about-col-1 {
+    flex-basis: 35%; /* กำหนดความกว้างของคอลัมน์ที่ 35% */
+}
+.about-col-1 img {
+    width: 100%; /* ทำให้รูปภาพเต็มความกว้างของคอลัมน์ */
+    height: auto; /* ปรับความสูงอัตโนมัติตามสัดส่วนของรูปภาพ */
+    display: block; /* ทำให้รูปภาพเป็นบล็อก */
+    margin: 0 50px 10px; /* ทำให้รูปภาพอยู่ตรงกลางของคอลัมน์ */  
+    border-radius: 10px; /* ทำให้มุมของรูปภาพโค้งมน */
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงขนาดเมื่อเลื่อนเมาส์ */
+    cursor: pointer; /* ทำให้ลิงก์สามารถเลื่อนเมาส์ได้ */
+}
+.about-col-1 img:hover {
+    transform: scale(1.1); /* ปรับขนาดของรูปภาพเมื่อเลื่อนเมาส์ */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับรูปภาพเมื่อเลื่อนเมาส์ */
+}
+
+.about-col-2 {
+    flex-basis: 60%; /* กำหนดความกว้างของคอลัมน์ที่ 60% */
+    padding-left: 20px; /* เพิ่มระยะห่างด้านซ้าย */
+}
+.about-col-2.about-col-2 h3 {
+    font-family:'Courier New', Courier, monospace; /* เปลี่ยนเป็นชื่อฟอนต์ที่ต้องการ */
+    color: #ff004f; /* สีของหัวข้อ */
+    
+}
+    /* --------------------------Services ----------------------------------*/
+.sub-title {
+    font-size: 1.5rem; /* ขนาดของหัวข้อย่อย */
+    font-weight: 600; /* ทำให้ตัวอักษรบาง */
+    color:#fff
+}
+p{
+    font-size: 1.2rem; /* ขนาดของข้อความ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    color: #f0f0f0; /* สีของข้อความ */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+}
+.tab-titles{
+    display: flex;
+    justify-content: space-between; /* จัดตำแหน่งหัวข้อให้กระจาย */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+.tab-titles  {
+    display: flex;
+    margin: 20px 0 40px; /* ระยะห่างด้านบนและล่าง */
+    justify-content: space-between; /* จัดตำแหน่งหัวข้อให้กระจาย */
+    align-items: center; /* จัดตำแหน่งหัวข้อให้อยู่ตรงกลางในแนวตั้ง */
+
+    
+}
+.tab-links {
+    margin-right: 50px; /* ระยะห่างระหว่างหัวข้อ */
+    font-size: 50px;
+    font-weight: 600; 
+    cursor:pointer; /* ทำให้หัวข้อสามารถเลื่อนเมาส์ได้ */
+    color: #fff;
+    transition: color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีเมื่อเลื่อนเมาส์ */
+}
+.tab-links:hover {
+    color: #df8106; /* สีของหัวข้อเมื่อเลื่อนเมาส์ */
+}
+.tab-links::after {
+    content: ""; /* สร้างเส้นใต้ */
+    width: 50%;
+    height: 3px;
+    background : #ff004f; /* สีของเส้นใต้ */
+}
+
+.tab-contents{
+    list-style: none; /* เอาเส้นใต้ของลิงก์ออก */
+    display: none; /* ซ่อนเนื้อหาของแท็บทั้งหมด */
+    margin: 10px 0; /* ระยะห่างด้านบนและล่าง */
+}
+.tab-contents ul li span {
+   color: #b54769; /* สีของข้อความที่ต้องการเน้น */
+    font-weight: bold; /* ทำให้ข้อความหนาขึ้น */
+    font-size: 1.5rem; /* ขนาดของข้อความที่ต้องการเน้น */
+    display: inline-block; /* ทำให้ข้อความเป็นบล็อก */
+
+}
+.tab-contents ul li p {
+    font-size: 1.2rem; /* ขนาดของข้อความ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    color: #f0f0f0; /* สีของข้อความ */
+    margin-top: 10px; /* ระยะห่างด้านบน */
+}
+.tab-contents.active-tab{
+    display: block; /* แสดงเนื้อหาของแท็บที่ถูกเลือก */
+}
+
+/* ปรับ .service-row เป็น flex container */
+.service-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+/* ปรับ .service-col ให้ใช้ flex child และจัดคอลัมน์ */
+.service-col {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* hover effect */
+.service-col:hover {
+    background-color: #222;
+    transform: scale(1.05) translateY(-20px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-col:hover h3,
+.service-col:hover p,
+.service-col:hover i {
+    color: #ff004f;
+    transition: color 0.3s;
+}
+
+.sub-title {
+    font-size: 2rem; /* ขนาดของหัวข้อ */
+    color: #ff004f; /* สีของหัวข้อ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    text-align: center; /* จัดตำแหน่งหัวข้อให้อยู่ตรงกลาง */
+}
+
+.service-col i{
+    font-size: 3rem; /* ขนาดของไอคอน */
+    color: #fff; /* สีของไอคอน */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+
+.service-col h3 {
+    font-size: 1.5rem; /* ขนาดของหัวข้อ */
+    color: #fff; /* สีของหัวข้อ */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.service-col p {
+    font-size: 1.2rem; /* ขนาดของข้อความ */
+    color: #f0f0f0; /* สีของข้อความ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+}
+
+.service-col a {
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    color: #3606e2; /* สีของลิงก์ */
+}
+.service-col img{ 
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* ทำให้มุมของรูปภาพโค้งมน */
+    box-shadow: 0 4px 8px rgba(240, 238, 238, 0.979); /* เพิ่มเงาให้กับรูปภาพ */
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงขนาดเมื่อเลื่อนเมาส์ */
+    cursor: pointer; /* ทำให้รูปภาพสามารถเลื่อนเมาส์ได้ */
+}
+
+/* ----------------Portfolio------------------------- */
+#portfolio {
+    padding: 50px 0;
+    background-color: #080808; /* สีพื้นหลังของส่วน portfolio */
+    color: #333; /* สีตัวอักษร */
+}
+
+.portfolio-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* กำหนดให้มี 3 คอลัมน์ */
+    grid-gap: 20px; /* ระยะห่างระหว่างคอลัมน์ */
+    margin-top: 50px; /* ระยะห่างด้านบน */
+}
+
+.portfolio-col {
+    border-radius: 10px; /* ทำให้มุมของคอลัมน์โค้งมน */
+    position: relative; /* ให้คอลัมน์สามารถใช้ z-index ได้ */
+    overflow: hidden; /* ป้องกันไม่ให้เนื้อหาภายในคอลัมน์ล้นออกมา */
+}
+
+.portfolio-item-hidden {
+    display: none;
+}
+
+.portfolio-col img {
+    width: 85%;         /* ปรับขนาดภาพให้เล็กลงเหลือ 70% ของคอลัมน์ */
+    height: auto;
+    display: block;
+    margin: 0 40px 20px;
+    border-radius: 10px;     
+
+}
+
+.portfolio-col h3 {
+    font-size: 1.5rem; /* ขนาดของหัวข้อ */
+    color: #ff004f; /* สีของหัวข้อ */      
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+
+.layer {
+    width: 100%;
+    height: 0%; /* กำหนดความสูงของเลเยอร์เป็น 0% เพื่อให้ไม่แสดงผล */
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f); /* สีพื้นหลังของเลเยอร์ */
+    border-radius: 10px; /* ทำให้มุมของเลเยอร์โค้งมน */
+    position:absolute; /* ให้เลเยอร์อยู่เหนือคอลัมน์ */
+    left: 0;
+    bottom: 0;
+    overflow: hidden; /* ป้องกันไม่ให้เนื้อหาภายในเลเยอร์ล้นออกมา */
+    align-items: center; /* จัดตำแหน่งเนื้อหาให้อยู่ตรงกลางในแนวตั้ง */
+    justify-content: center; /* จัดตำแหน่งเนื้อหาให้อยู่ตรงกลางในแนวนอน */
+    display: flex; /* ทำให้เลเยอร์เป็น flex container */
+    flex-direction: column; /* ทำให้เนื้อหาอยู่ในแนวตั้ง */
+    padding: 0 40px; /* เพิ่มระยะห่างด้านซ้ายและขวา */
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลาง */
+    color: #fff; /* สีของข้อความ */
+    font-size: 14px; /* ขนาดของข้อความ */
+}
+
+.layer a {
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    color: #ff004f; /* สีของลิงก์ */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    padding: 10px 20px; /* เพิ่ม padding ให้กับลิงก์ */
+    line-height: 60px; /* ระยะห่างระหว่างบรรทัด */
+    font-size: 1.2rem; /* ขนาดของลิงก์ */
+    border-radius: 5px; /* ทำให้มุมของลิงก์โค้งมน */
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ทำให้มุมของลิงก์โค้งมน */
+}
+.layer  i {
+    font-size: 2rem; /* ขนาดของไอคอน */
+    color: #ff004f; /* สีของไอคอน */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+
+}
+.portfolio-col:hover img {
+    transform: scale(1.1); /* ปรับขนาดของภาพเมื่อเลื่อนเมาส์ */
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงขนาดเมื่อเลื่อนเมาส์ */
+}
+.portfolio-col:hover .layer {
+    height: 100%; /* แสดงผลเลเยอร์เมื่อเลื่อนเมาส์ */
+    transition: height 0.3s ease; /* เพิ่มการเปลี่ยนแปลงความสูงเมื่อเลื่อนเมาส์ */
+}
+.btn-more{
+    display: block; /* ทำให้ปุ่มเป็นบล็อก */
+    margin: 20px auto; /* จัดตำแหน่งปุ่มให้อยู่ตรงกลาง */
+    padding: 10px 20px; /* เพิ่ม padding ให้กับปุ่ม */
+    width: fit-content; /* ปรับขนาดของปุ่มให้พอดีกับเนื้อหา */
+    border: 1px solid #ff004f; /* เส้นขอบของปุ่ม */
+    border-radius: 5px; /* ทำให้มุมของปุ่มโค้งมน */
+    background-color: #080808; /* สีพื้นหลังของปุ่ม */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    color: #fff; /* สีของตัวอักษร */
+}
+.btn-more:hover{
+    background-color: #ff004f;
+    color: #fff; /* เปลี่ยนสีตัวอักษรเมื่อเลื่อนเมาส์ */
+    transition: background-color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีพื้นหลังเมื่อเลื่อนเมาส์ */
+}
+/* ----------------Contact------------------------- */
+.row-contact {
+    display: flex;
+    justify-content:space-between; /* จัดตำแหน่งคอลัมน์ให้อยู่ตรงกลาง */
+    flex-wrap: wrap; /* ทำให้คอลัมน์สามารถย้ายไปยังบรรทัดถัดไปได้เมื่อพื้นที่ไม่พอ */
+    margin: 50px 0; /* ระยะห่างด้านบนและล่าง */
+    padding: 0 150px; /* เพิ่ม padding ด้านซ้ายและขวา */
+    background-color: #080808; /* สีพื้นหลังของส่วน contact */
+}
+
+.context-left {
+    flex-basis: 35%; /* กำหนดความกว้างของคอลัมน์ที่ 35% */
+    padding: 20px; /* เพิ่มระยะห่างด้านใน */
+}
+.context-right{
+    flex-basis: 60%; /* กำหนดความกว้างของคอลัมน์ที่ 60% */
+    padding: 20px; /* เพิ่มระยะห่างด้านใน */
+}
+.context-left p{
+    font-size: 1.2rem; /* ขนาดของข้อความ */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+}
+.context-left p i {
+    color: #ff004f; /* สีของไอคอน */
+    margin-right: 20px; /* ระยะห่างด้านขวา */
+}
+.social-icons {
+    display: flex; /* ทำให้ไอคอนเป็น flex container */
+    justify-content: left; /* จัดตำแหน่งไอคอนให้อยู่ตรงกลาง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    padding: 20px; /* เพิ่ม padding ด้านใน */
+    
+}
+.social-icons a {
+    margin: 0 20px; /* ระยะห่างด้านซ้ายและขวา */
+    color: #fff; /* สีของไอคอน */ 
+    font-size: 2rem; /* ขนาดของไอคอน */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    display : inline-block; /* ทำให้ไอคอนเป็นบล็อก */
+
+}
+.social-icons a:hover {
+    color: #ff004f; /* เปลี่ยนสีไอคอนเมื่อเลื่อนเมาส์ */
+    transition: color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีเมื่อเลื่อนเมาส์ */
+}
+
+.btn-CV {
+    display: inline-block; /* ทำให้ปุ่มเป็นบล็อก */
+    padding: 10px 20px; /* เพิ่ม padding ให้กับปุ่ม */
+    background-color: #ff004f; /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีของตัวอักษร */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    border-radius: 5px; /* ทำให้มุมของปุ่มโค้งมน */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+.btn-send{
+    display: inline-block; /* ทำให้ปุ่มเป็นบล็อก */
+    padding: 10px 20px; /* เพิ่ม padding ให้กับปุ่ม */
+    background-color: #ff004f; /* สีพื้นหลังของปุ่ม */
+    color: #fff; /* สีของตัวอักษร */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    border-radius: 5px; /* ทำให้มุมของปุ่มโค้งมน */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    font-size: 30px;
+    font-weight: 600; /* ขนาดของตัวอักษร */
+}
+
+.context-right form {
+   width: 100%; /* กำหนดความกว้างของฟอร์มให้เต็ม */
+    display: flex; /* ทำให้ฟอร์มเป็น flex container */
+    flex-direction: column; /* ทำให้เนื้อหาอยู่ในแนวตั้ง */
+}
+
+form input, form textarea {
+    width: 100%; /* กำหนดความกว้างของ input และ textarea ให้เต็ม */
+    border: 0; /* เอาเส้นขอบออก */
+    outline: none; /* เอาเส้นขอบเมื่อเลื่อนเมาส์ออก */
+    background: #262626; /* สีพื้นหลังของ input และ textarea */
+    padding: 15px; /* เพิ่ม padding ให้กับ input และ textarea */
+    margin: 15px 0; /* ระยะห่างด้านบนและล่าง */
+    color: #fff; /* สีของตัวอักษร */
+    font-size: 1rem; /* ขนาดของตัวอักษร */
+    border-radius: 5px; /* ทำให้มุมของ input และ textarea โค้งมน */
+}
+
+.copyright{
+    text-align: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลาง */
+    padding: 20px; /* เพิ่ม padding ด้านใน */
+    background-color: #080808; /* สีพื้นหลังของส่วน copyright */
+    color: #fff; /* สีของตัวอักษร */
+    font-size: 1rem; /* ขนาดของตัวอักษร */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+/* Css for small screens (responsive design) */
+nav .fa { /* แก้ไข selector: .fa-solid.fa-bars */
+    display: none; /* ซ่อนไอคอน hamburger บนหน้าจอใหญ่ */
+}
+
+
+/* ----------------- Responsive Design (Mobile First) ----------------- */
+nav .fas, .fa-solid.fa-xmark{
+    display: none; /* ซ่อนไอคอน hamburger บนหน้าจอใหญ่ */
+}
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #header {
+       background-image: url(/images/phone-background.png); /* เปลี่ยนเป็น URL ของภาพพื้นหลังที่ต้องการ */
+    }
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    
+}
+nav ul li a:hover{
+    background-color: #333; /* เปลี่ยนสีพื้นหลังเมื่อเลื่อนเมาส์ */
+    color: #f0f0f0; /* เปลี่ยนสีตัวอักษรเมื่อเลื่อนเมาส์ */
+}
+nav ul li a:hover{
+    color: #f0f0f0;
+}
+nav .logo{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 2rem;
+    transition: transform 0.3s ease; 
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้น */
+    z-index: 1; /* ทำให้โลโก้อยู่บน top */
+    position: relative; /* ให้โลโก้สามารถใช้ z-index ได้ */
+    z-index: 1; /* ทำให้โลโก้อยู่บน top */
+    z-index: 1; /* ทำให้โลโก้อยู่บน top */
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้น */
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงขนาดเมื่อเลื่อนเมาส์ */
+    transform: scale(1); /* เริ่มต้นที่ขนาดปกติ */
+    transition: transform 0.3s ease;
+}
+nav .logo:hover{
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้นเมื่อผู้ใช้เลื่อนไปยังโลโก้ */
+    transform: scale(1.1); /* ปรับขนาดของโลโก้ให้ใหญ่ขึ้นเมื่อผู้ใช้เลื่อนเมาส์มา */
+}
+
+.header-content {
+    margin-top: 10px; /* ระยะห่างด้านบน */
+}
+.tab-titles{
+    display: flex;
+    justify-content: space-between; /* จัดตำแหน่งหัวข้อให้กระจาย */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+.tab-titles  {
+    display: flex;
+    margin: 20px 0 40px; /* ระยะห่างด้านบนและล่าง */
+    justify-content: space-between; /* จัดตำแหน่งหัวข้อให้กระจาย */
+    align-items: center; /* จัดตำแหน่งหัวข้อให้อยู่ตรงกลางในแนวตั้ง */
+
+    
+}
+.tab-links {
+    margin-right: 50px; /* ระยะห่างระหว่างหัวข้อ */
+    font-size: 50px;
+    font-size: 3rem; /* ปรับขนาดให้เหมาะสม อาจลดลงใน media query */
+    font-weight: 600; 
+    cursor:pointer; /* ทำให้หัวข้อสามารถเลื่อนเมาส์ได้ */
+    color: #fff;
+    transition: color 0.3s ease; /* เพิ่มการเปลี่ยนแปลงสีเมื่อเลื่อนเมาส์ */
+    position: relative; /* สำหรับ ::after positioning */
+    padding-bottom: 5px; /* เพิ่มพื้นที่สำหรับเส้นใต้ */
+}
+.tab-links:hover {
+    color: #df8106; /* สีของหัวข้อเมื่อเลื่อนเมาส์ */
+}
+.tab-links::after {
+    content: ""; /* สร้างเส้นใต้ */
+    width: 50%;
+    width: 0; /* เริ่มต้นที่ไม่มีเส้นใต้ */
+    height: 3px;
+    background : #ff004f; /* สีของเส้นใต้ */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+.tab-links.active-link::after { /* class นี้จะถูกเพิ่มโดย JavaScript เมื่อ tab active */
+    width: 50%; /* แสดงเส้นใต้ 50% เมื่อ tab active */
+}
+
+.tab-contents{
+    font-size: 1rem; /* ขนาดของตัวอักษร */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+/* Css for small screens (responsive design) */
+nav .fas { /* แก้ไข selector: .fa-solid.fa-bars */
+
+/* ----------------- Icons for Hamburger Menu (Font Awesome) ----------------- */
+nav .fas.fa-bars, nav .fas.fa-times {
+    display: none; /* ซ่อนไอคอน hamburger บนหน้าจอใหญ่ */
+}
+}
+
+/* ----------------- Responsive Design ----------------- */
+
+/* Medium devices (tablets, less than 992px) */
+@media only screen and (max-width: 992px) {
+    .header-content {
+        margin-top: 15%;
+        font-size: 25px;
+    }
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%; /* ทำให้คอลัมน์เต็มความกว้าง */
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-1 img {
+        margin: 0 auto 10px; /* จัดให้อยู่กลาง */
+    }
+    .about-col-2 {
+        padding-left: 0; /* ลบ padding ซ้ายเมื่อ stack */
+        text-align: center; /* จัดข้อความให้อยู่กลาง */
+    }
+    .about-col-2 p {
+        text-align: left; /* ให้ paragraph ชิดซ้ายเหมือนเดิม */
+        padding: 0 15px;
+    }
+
+    .tab-links {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+
+    .service-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-col {
+        width: 80%; /* ปรับความกว้างของ service column */
+        margin-bottom: 30px;
+    }
+
+    .portfolio-row {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .row-contact {
+        padding: 0 50px; /* ลด padding ด้านข้าง */
+        flex-direction: column;
+    }
+    .context-left, .context-right {
+        flex-basis: 100%;
+    }
+    .context-left {
+        margin-bottom: 30px;
+    }
+}
+
+/* Small devices (landscape phones, tablets in portrait, less than 768px) */
+@media only screen and (max-width: 768px) {
+    nav .logo {
+        width: 150px; /* ลดขนาดโลโก้ */
+        height: 150px;
+        margin-left: 1rem;
+    }
+    nav .fas.fa-bars {
+        display: block; /* แสดงไอคอน hamburger */
+    }
+    nav ul {
+        background: #333; /* สีพื้นหลังของเมนูเมื่อเปิด */
+        position: fixed; /* หรือ absolute ขึ้นอยู่กับการออกแบบ */
+        top: 0;
+        right: -200px; /* ซ่อนเมนูไว้ทางขวา (ความกว้างของเมนู) */
+        width: 200px; /* ความกว้างของเมนู */
+        height: 100vh;
+        padding-top: 50px;
+        flex-direction: column; /* จัดเรียงรายการเมนูเป็นแนวตั้ง */
+        align-items: center; /* จัดให้อยู่กลาง */
+        justify-content: flex-start;
+        transition: right 0.5s; /* เพิ่ม animation */
+        z-index: 2; /* ให้อยู่เหนือเนื้อหาอื่น */
+    }
+    nav ul.show-menu { /* class นี้จะถูก toggle ด้วย JavaScript */
+        right: 0; /* แสดงเมนู */
+    }
+    nav ul li {
+        margin: 1.5rem 0; /* ปรับ margin ของรายการเมนู */
+        font-size: 1.5rem; /* ลดขนาดตัวอักษรเมนู */
+    }
+    nav ul .fas.fa-times,
+    nav ul .fa-solid.fa-xmark {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .header-content {
+        margin-top: 20%;
+        font-size: 20px;
+    }
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    .header-content p {
+        font-size: 1rem;
+    }
+    .tab-links {
+        font-size: 1.5rem; /* ลดขนาด font ของ tab links */
+        margin-right: 15px;
+    }
+    .tab-titles {
+        flex-wrap: wrap; /* ให้ tab titles ขึ้นบรรทัดใหม่ได้ */
+        justify-content: center;
+    }
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #header {
+    }
+}
+
+/* Extra small devices (phones, less than 600px) - specific adjustments */
+@media only screen and (max-width: 600px) {
+    .header-content {
+        margin-top: 25%;
+        padding: 0 10px;
+    }
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+    .header-content span {
+        font-size: 1.2rem;
+    }
+
+    .about-col-1 img {
+        width: 90%; /* ปรับขนาดรูปภาพในส่วน about */
+    }
+
+    .service-col {
+        width: 90%; /* ปรับความกว้างของ service column */
+    }
+    .portfolio-col img {
+        width: 90%;
+        margin: 0 auto 15px;
+    }
+    .row-contact {
+        padding: 0 20px; /* ลด padding ด้านข้างอีก */
+    }
+   
+}
+
+
+.popup {
+    display: none; /* ปิดการแสดงผลเริ่มต้น */
+    position: fixed; /* ติดที่ตำแหน่งบนหน้าจอ */
+    z-index: 1; /* วางบนหน้าจอ */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังเป็นสีเทา */
+  }
+
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 1200px;    /* เพิ่มขนาดสูงสุดของ popup */
+    max-height: 90vh;
+    width: 900px;         /* กำหนดความกว้างเริ่มต้นให้ใหญ่ขึ้น */
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ff004f; /* สีของปุ่มปิด */
+
+  }
+.popup img {
+    width: 100%; /* ปรับขนาดรูปภาพให้เต็มพื้นที่ */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+    border-radius: 5px; /* ทำให้มุมของรูปภาพโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับรูปภาพ */
+}
+
+/* Slider container */
+.popup-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 800px;         /* เพิ่มความกว้าง slider */
+    max-width: 1000px;
+    height: 600px;        /* เพิ่มความสูง slider */
+    max-height: 80vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Slide images */
+.popup-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    display: none;
+    height: 100%;
+    object-fit: contain;
+}
+.popup-slide.active {
+    display: block;
+}
+
+/* Navigation arrows */
+.popup-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #ff004f;
+    background: rgba(255,255,255,0.7);
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 10px;
+    border-radius: 50%;
+    user-select: none;
+}
+.popup-arrow.left {
+    left: 10px;
+}
+.popup-arrow.right {
+    right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .popup-content, .popup-slider {
+        width: 98vw;
+        max-width: 98vw;
+        height: 60vw;
+        max-height: 70vh;
+        padding: 5px;
+    }
+}
+@media (max-width: 600px) {
+    .popup-content, .popup-slider {
+        width: 99vw;
+        max-width: 99vw;
+        height: 220px;
+        max-height: 40vh;
+        padding: 5px;
+    }
+}
+
+#openPopup {
+    display: block;                /* ให้ปุ่มเป็น block เพื่อใช้ margin auto */
+    margin: 30px auto 0 auto;      /* จัดปุ่มให้อยู่ตรงกลางแนวนอน และเพิ่มระยะห่างด้านบน */
+    padding: 16px 40px;            /* เพิ่มขนาดปุ่มให้ใหญ่ขึ้น */
+    background-color: #ff004f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;             /* ขนาดตัวอักษรใหญ่ขึ้น */
+    font-weight: 600;
+    text-align: center;            /* จัดข้อความในปุ่มให้อยู่กลาง */
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border: none;
+}

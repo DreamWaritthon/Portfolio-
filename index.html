@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Porfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#header">
+                    <img src="images/Logo_waritthon.png" class="logo" alt="Logo">
+                </a>
+                <i class="fas fa-bars" id="menuIconOpen"></i>
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" id="menuIconClose"></i>
+                </ul>
+
+
+            </nav>
+            <div class="header-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Hi,I'm <span>waritthon Thiandam</span></p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </div>
+    <!-- ----------about-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user_Dream.png" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <h3>Hello! My name is Waritthon Thiandam, a passionate web developer with a keen interest in
+                        creating dynamic and responsive websites. I have experience in HTML, CSS, JavaScript, and
+                        various web development frameworks.</h3>
+                    <p>สวัสดีครับ! ผมชื่อ วริทธิ์ธร เทียนดำ,
+                        นักพัฒนาเว็บไซต์ที่มีความสนใจในการสร้างเว็บไซต์ที่ตอบโจทย์และ Responsive.
+                        ฉันมีประสบการณ์ในการพัฒนาเว็บไซต์ด้วย HTML, CSS, JavaScript, Tailwind ,Bootstrap , React,
+                        SQL,Node.js, Express.js, MongoDB, และหลายแพลตฟอร์มการพัฒนาเว็บไซต์.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="handleTab('skills', this)">Skills</p>
+                        <p class="tab-links" onclick="handleTab('experience', this)">Experience</p>
+                        <p class="tab-links" onclick="handleTab('education', this)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span> HTML, CSS, JavaScript </span></li>
+                            <li><span> Tailwind CSS, Bootstrap </span></li>
+                            <li><span> React, Node.js, Express.js </span></li>
+                            <li><span> MongoDB, SQL </span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> 2025 - Current </span><br>
+                                <p>ควบคุม ดูแล ติดตั้ง บำรุงรักษา ซ่อมแซม ตรวจสอบการทำงาน <br>
+                                    แก้ไขปัญหาการใช้งานของระบบเครื่องคอมพิวเตอร์และอุปกรณ์ต่อพ่วง ระบบเครือข่ายสื่อสาร
+                                    รวมทั้งระบบสนับสนุนต่างๆ <br>
+                                    ปฏิบัติงานเกี่ยวกับการประมวลผลข้อมูล ปรับปรุง ดูแล รักษาความปลอดภัย จัดเก็บ สำรอง
+                                    กู้คืนข้อมูล และป้องกันการสูญหายของข้อมูล </p>
+                            </li>
+                            <li><span> 2023 - 2025</span><br>
+                                <p>ดูแลและแก้ไขปัญหาระบบ ERP ให้ใช้งานได้เป็นปกติ<br>
+                                    ดูแลอุปกรณ์ IT CCTV Server Network รวมถึงการซ่อม<br>
+                                    บํารุงอุปกรณ์ให้พร้อมใช้สําหรับการทํางาน <br>
+                                    วิเคราะห์ข้อมูล ด้วย Excel, Power BI</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span> Bachelor of Science in Computer Science </span><br>
+                                <p>มหาวิทยาลัยเจ้าพระยา 2020 - 2023 | GDP : 3.75</p>
+                            </li>
+                            <li><span> Diploma in Business Computer </span><br>
+                                <p>วิทยาลัยอาชีวศึกษาวิริยาลัยนครสวรรค์ 2018 - 2020 | GDP : 3.98</p>
+                            </li>
+                            <li><span> Secondary school diploma </span><br>
+                                <p>ทหารอากาศอนุสรณ์ 2012 - 2015 | GDP : 3.75</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------services-------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="service-row">
+                <div class="service-col">
+                    <i class="fa-solid fa-code"></i><br>
+                    <img src="images/img_Web Development.png" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and dynamic websites using modern web technologies.</p>
+                </div>
+                <div class="service-col">
+                    <i class="fa-solid fa-screwdriver-wrench"></i><br>
+                    <img src="images/Computer technician.png" alt="UI/UX Design">
+                    <h3>Computer technician</h3>
+                    <p>ให้การสนับสนุนด้านการซ่อม </p>
+                </div>
+                <div class="service-col">
+                    <i class="fa-solid fa-chart-simple"></i> <br>
+                    <img src="images/Data analyst.png" alt="Mobile App Development">
+                    <h3>Data analyst</h3>
+                    <p>Developing mobile applications for both Android and iOS platforms.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------portfolio-------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="portfolio-row">
+                <div class="portfolio-col">
+                    <img src="images/work-1.png" alt="Portfolio Image 1">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-1"></i>
+                        <p>จัดทำแผนที่ภาพถ่ายทางอากาศและเครื่องรับสัญญาณดาวเทียม (GNSS) ชนิดหลายความถี่</p>
+                    </div>
+                </div>
+                <div class="portfolio-col">
+                    <img src="images/work-2.png" alt="Portfolio Image 2">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-2"></i>
+                        <p>ซ่อมเครื่องปริ้นเตอร์ Dot matrix, Inkjet, Laser</p>
+                    </div>
+                </div>
+                <div class="portfolio-col">
+                    <img src="images/work-3.png" alt="Portfolio Image 3">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-3"></i>
+                        <p>ควบคุม ดูแล ติดตั้ง บำรุงรักษา ซ่อมแซม ตรวจสอบการทำงานแก้ไขปัญหาของเครื่องคอมพิวเตอร์</p>
+                    </div>
+                </div>
+                <div class="portfolio-col">
+                    <img src="images/work-4.png" alt="Portfolio Image 4">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-4"></i>
+                        <p>ซ่อมแซม ตรวจสอบการทำงานแก้ไขปัญหาของ <br>โน๊ตบุ๊ค</p>
+                    </div>
+                </div>
+                <div class="portfolio-col portfolio-item-hidden">
+                    <img src="images/work-5.png" alt="Portfolio Image 5">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-5"></i>
+                        <p>การใช้อากาศยานไร้คนขับ <br>(Unmanned Aerial Vehicle)</p>
+                    </div>
+                </div>
+                <div class="portfolio-col portfolio-item-hidden">
+                    <img src="images/work-6.png" alt="Portfolio Image 6">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-6"></i>
+                        <p>ติดตั้ง เดินสายแลน ระบบเครือข่ายเน็ตเวิร์คระยะใกล้ (Local Area Network) </p>
+                    </div>
+                </div>
+                <div class="portfolio-col portfolio-item-hidden">
+                    <img src="images/work-7.png" alt="Portfolio Image 7">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-7"></i>
+                        <p>ตรวจสอบการทำงานของอุปกรณ์ต้นทาง </p>
+                    </div>
+                </div>
+                <div class="portfolio-col portfolio-item-hidden">
+                    <img src="images/work-8.png" alt="Portfolio Image 8">
+                    <div class="layer">
+                        <h3>ผลงานการทำงาน</h3>
+                        <i class="fa-solid fa-8"></i>
+                        <p>ดำเนินการติดตั้ง วางระบบ POS </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="btn-more" id="seeMoreBtn">See more</a>
+    <!-- ----------------- Popup Certificate -------- -->   
+    <button id="openPopup">เปิด Popup</button>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <div class="popup-slider">
+          <button class="popup-arrow left" id="popupPrev">&#8592;</button>
+          <img src="images/Certificate/borntodev-academy_ChatGPT for Developers_certificate.png" class="popup-slide active" alt="slide1">
+          <img src="images/Certificate/borntodev-academy_Command Prompt 101_certificate.png" class="popup-slide" alt="slide2">
+          <img src="images/Certificate/borntodev-academy_Essential SQL for Everyone_certificate.png" class="popup-slide" alt="slide3">
+          <img src="images/Certificate/borntodev-academy_GitHub for Developer _certificate.png" class="popup-slide" alt="slide4">
+          <img src="images/Certificate/borntodev-academy_Prompt Engineering with GitHub Copilot_certificate.png" class="popup-slide" alt="slide5">
+          <button class="popup-arrow right" id="popupNext">&#8594;</button>
+        </div>
+      </div>
+    </div>
+    <!-- ----------contact-------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row-contact">
+                <div class="context-left">
+                    <div class="sub-title">Contact Me</div>
+                    <p><i class="fa-solid fa-envelope"></i>waritthon.t168@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+66 96935 2869</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://line.me/ti/p/7oOKuH842v" target="_blank"><i class="fa-brands fa-line"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/CV.pdf" download class="btn-CV">Download CV</a>
+                </div>
+                <div class="context-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea rows="5" name="Message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn-send">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Waritthon Thiandam. All rights reserved.</p>
+            <p>Designed by Waritthon Thiandam</p>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
