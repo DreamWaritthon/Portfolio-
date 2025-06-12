@@ -782,6 +782,23 @@ nav .fas.fa-bars, nav .fas.fa-times {
         padding: 0 20px; /* ลด padding ด้านข้างอีก */
     }
    
+    .popup-slider {
+        display: block !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    .popup-slide {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 16px;
+    }
+    .popup-slide.active {
+        display: block !important;
+    }
 }
 
 
